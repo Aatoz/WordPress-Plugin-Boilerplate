@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://4DeepBets.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    live_odds_updater
+ * @subpackage live_odds_updater/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    live_odds_updater
+ * @subpackage live_odds_updater/includes
+ * @author     Aatoz <Aaotz@4DeepBets.com>
  */
-class Plugin_Name_Activator {
+class live_odds_updater_Activator {
 
 	/**
 	 * Short Description. (use period)

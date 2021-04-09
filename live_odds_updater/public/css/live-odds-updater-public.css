@@ -1,0 +1,81 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+ #liveOdds > table {
+	border-collapse: collapse !important;
+	font-size: smaller !important;
+	color: #ebebeb !important;
+}
+#liveOdds > table th,
+#liveOdds > table td {
+	border-bottom: none !important;
+}
+.dateRow {
+	height: 35px !important;
+}
+.dateRow > td,
+.dateRow > th {
+	/*background-image: linear-gradient(to left, #02305f, #061fce);*/
+	background-color: #333333 !important;
+}
+.longDate {
+	display: inline-block !important;
+	width: 100% !important;
+	text-align: center !important;
+	background-color: #333333 !important;
+	color: #dadada !important;
+}
+.timeRow, .timeRow > th {
+	width: 100px !important;
+	height: 30px !important;
+}
+.timeRow > th:not(.time) {
+	/*position: relative !important;*/
+	box-shadow: 0.30em 0 0 0 #6f131557 !important;
+	background-color: #161616 !important;
+	/*border: outset 2px rgb(214 214 214 / 65%) !important;*/
+}
+.time {
+	box-shadow: 0.30em 0 0px 0.35px rgb(0 0 0 / 30%) !important; /* SLIGHTLY more transparency for visuals*/
+	position: relative !important;
+	padding-left: 12px !important;
+	text-align: left !important;
+	color: #1495ac !important;
+	background-color: #161616 !important;
+}
+.bookie {
+	width: 100% !important;
+	height: 100% !important;
+	/*object-fit: contain; -- used for <img> if I go that way*/
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	background-position: center !important;
+}
+.Bovada,
+.WilliamHill {
+	/*object-fit: cover !important;*/
+	background-size: cover !important;
+}
+.team {
+	box-shadow: 0.3em 0 0 0 #6f131585 !important;
+	padding-left: 8px !important;
+	width: 275px !important;
+	max-width: 275px !important;
+}
+.linesRow, .linesRow > th {
+	background-color: #333333 !important;
+}
+.linesRow > td:not(.team) {
+	text-align: center !important;
+}
+.linesRow em {
+	vertical-align: text-bottom !important; /* This aligns well with the Spread to the left*/
+	font-size: small !important;
+	margin-left: 4px !important;
+}
+.linesRow.g2 {
+	border-top: inset 3px #6f1315 !important;
+}

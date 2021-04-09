@@ -3,11 +3,11 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://4DeepBets.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @package    live_odds_updater
+ * @subpackage live_odds_updater/public
  */
 
 /**
@@ -16,20 +16,20 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
- * @author     Your Name <email@example.com>
+ * @package    live_odds_updater
+ * @subpackage live_odds_updater/public
+ * @author     Aatoz <Aatoz@4DeepBets.com>
  */
-class Plugin_Name_Public {
+class live_odds_updater_Public {
 
 	/**
 	 * The ID of this plugin.
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $live_odds_updater    The ID of this plugin.
 	 */
-	private $plugin_name;
+	private $live_odds_updater;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Plugin_Name_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
+	 * @param      string    $live_odds_updater       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $live_odds_updater, $version ) {
 
-		$this->plugin_name = $plugin_name;
+		$this->live_odds_updater = $live_odds_updater;
 		$this->version = $version;
 
 	}
@@ -65,15 +65,15 @@ class Plugin_Name_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in live_odds_updater_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The live_odds_updater_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->live_odds_updater, plugin_dir_url( __FILE__ ) . 'css/live-odds-updater-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,16 +88,23 @@ class Plugin_Name_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in live_odds_updater_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The live_odds_updater_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->live_odds_updater, plugin_dir_url( __FILE__ ) . 'js/live-odds-updater-public.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+	public funtion enqueue_oddsUpdater() {
+		wp_enqueue_style($this->live_odds_updater, plugin_dir_url(__FILE__) . "css/oddsUpdater.css",
+			array(), $this->version, "all");
+		wp_enqueue_script($this->live_odds_updater, plugin_dir_url(__FILE__) . "js/oddsUpdater.js",
+			array("jquery"), $this->version, false);
 	}
 
 }
